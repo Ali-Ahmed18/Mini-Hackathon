@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blogging App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="spinnerDiv">
+        <div class="spinner min-vh-100 d-flex ">
+            <div class="spinner-border mx-auto my-auto" style="width: 4rem; height: 4rem; color:rgb(119, 73, 248);" role="status"></div>
+          </div>
+    </div>
+    
+           <!-- ***********************MODAL***************************** -->
+           <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Edit</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="uptTitle" class="col-form-label">Title:</label>
+                      <input type="text" class="form-control customInput" id="uptTitle">
+                    </div>
+                    <div class="mb-3">
+                      <label for="uptDescription" class="col-form-label">Blog Text:</label>
+                      <textarea class="form-control customInput" style="resize: none;" id="uptDescription"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" id="uptClose" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" id="updateBtn" style="background-color: rgb(119, 73, 248);">Update</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="delModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Edit</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                 Are you Sure You Want to Delete!
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" id="delClose" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" id="delBtn" style="background-color: rgb(119, 73, 248);">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- *************************************************************************************           -->
+    <div class="main" style="display: none;">
+        <div class="signup">
+            <div style="background-color: rgb(119, 73, 248);" >
+                <div class="topNavWraper d-flex justify-content-between mx-auto align-items-center py-1 container">
+                    <p class="mb-0 text-white fw-bold">Personal Blogging App</p>
+                    <div class="d-flex align-items-center gap-4">
+                        <a id="name" href="./profile.html" class="mb-0 text-white text-capitalize text-decoration-none" style="cursor: pointer;" >asdsad</a>
+                        <a id="linkBtn" href="javascript:void(0)" class="nav-link fw-bold text-white">Logout</a>
+                    </div>
+                </div>
+                
+            </div>
+          <nav class="px-5 navbar navbar-expand-sm shadow">
+            <div class="container">
+              <a class="navbar-brand d-flex align-items-center" href="./dashboard.html"><h2 class="fw-bold">Dashboard</h2></a>
+            </div>
+          </nav>
+          <div class="container">
+            <div class="mt-5 bg-white p-4 shadow">
+                <div class="mb-3">
+                    <input  type="email" class="form-control customInput" id="placeholder" placeholder="PlaceHolder">
+                  </div>
+                  <div class="mb-3">
+                    <textarea style="resize: none;" class="form-control customInput" placeholder="Whats in your mind?" id="text" rows="5"></textarea>
+                  </div>
+                  <button id="post" style="background-color: rgb(119, 73, 248) ;" class="btn mt-3 px-4 d-block text-white mb-2">Publish Blog</button>
+              </div>
+              <h2 class="fw-bold mt-5">My blogs</h2>
+              <div id="postBox" >
+                <!-- <div class="postConatiner postInputContainer mt-3 bg-white p-3 rounded">
+                    <div class="d-flex justify-content-between">
+                      <div class="authorsDetails d-flex align-items-center">
+                        <div class="post-header-container d-flex">
+                          <div style="width: 100px;height: 100px; overflow: hidden;" class="rounded">
+                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg" alt="" class="img-fluid">
+                          </div>
+                          <div class="userName-id ms-2">
+                            <h5 style="width: 70%;" class="fw-bold">my blogs sadsadsadasdad dsadasdsad</h5>
+                            <div class="d-flex align-items-center" style="font-size: 14px!important;color: #424242;">
+
+                              <div class="mb-1 text-capitalize username">ali ahmed</div>
+                              <div class="mb-0 ms-2">12 50 2023</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        
+                      </div>
+                    </div>
+                    <div class="postDetails">
+                      <p class="mt-3" style="color: #707070;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At vitae atque itaque, harum tempore autem laudantium impedit nobis provident porro doloribus culpa facere, perspiciatis cum architecto exercitationem quos tempora cupiditate iste quidem consectetur deserunt soluta rem? Ipsa exercitationem non natus, cupiditate nisi aspernatur voluptatem cumque rem numquam, cum placeat dolores.</p>
+                    </div>
+                    <div class="btns mt-3 d-flex gap-3">
+                      <span id="signIn"  style="color: rgb(119, 73, 248) ;">Delete</span>
+                      <span id="signIn" style="color: rgb(119, 73, 248) ;">Edit</span>
+                    </div>
+                  </div> 
+              </div> -->
+          </div>
+        
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+  integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+  <script src="dashboard.js" type="module"></script>
+</html>

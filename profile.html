@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .profileImg{
+            width: 150px;
+            height: 150px;
+
+        }
+        .profileImg img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+     <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Update Profile</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-floating mb-2">
+                    <input type="text" class="form-control customInput" id="Fname" placeholder="First Name">
+                    <label for="Fname" >First Name</label>
+                  </div>
+                <div class="form-floating mb-2">
+                    <input type="text" class="form-control customInput" id="Lname" placeholder="Last Name">
+                    <label for="Lname" >Last Name</label>
+                  </div>
+                  <div class="input-group">
+                    <input type="file" class="form-control" id="profileImage" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                    
+                  </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" id="updateClose" data-bs-dismiss="modal">Close</button>
+              <button type="button" id="updateProfile" class="btn btn-primary" style="background-color: rgb(119, 73, 248);">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="spinnerDiv">
+        <div class="spinner min-vh-100 d-flex ">
+            <div class="spinner-border mx-auto my-auto" style="width: 4rem; height: 4rem; color:rgb(119, 73, 248);" role="status"></div>
+          </div>
+    </div>
+    <div class="main" style="display: none;">
+        <div class="signup">
+            <div style="background-color: rgb(119, 73, 248);" >
+                <div class="topNavWraper d-flex justify-content-between mx-auto align-items-center py-1 container">
+                    <p class="mb-0 text-white fw-bold">Personal Blogging App</p>
+                    <div class="d-flex align-items-center gap-4">
+                        <h6 id="name" class="mb-0 text-white text-capitalize profileName">alied</h6>
+                        <a id="linkBtn" href="javascript:void(0)" class="nav-link fw-bold text-white">LogOut</a>
+                    </div>
+                </div>
+                
+            </div>
+            <nav class="px-5 navbar navbar-expand-sm shadow">
+                <div class="container">
+                  <a class="navbar-brand d-flex align-items-center" href="./profile.html"><h2 class="fw-bold">Profile</h2></a>
+                </div>
+              </nav>
+            <div class="page1">
+              <div class="signupForm shadow ">
+
+                <div class="profileImg position-relative rounded overflow-hidden">
+                    <img id="profilePic" src="./wallpaper-for-facebook-profile-photo.jpg" >
+
+                        <div data-bs-toggle="modal" data-bs-target="#profileModal" class="position-absolute"  style="right: 3%; bottom: 2%;cursor: pointer;">
+                            <i class="fa-solid fa-pen" style="color: rgb(119, 73, 248);"></i>
+                        </div>
+                   
+                </div>
+                    <label class="mt-4">Full Name:</label>
+                    <h5 class="text-capitalize profileName">hello world</h5>
+                
+              </div>
+            </div>
+              
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+  integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+  <script src="profile.js" type="module"></script>
+</html>
+</body>
+</html>
