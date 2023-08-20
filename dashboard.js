@@ -9,7 +9,7 @@ const postCard = (time,firstName,lastName,text,title,uId,profilePic,activeUserId
       <div class="authorsDetails d-flex align-items-center">
         <div class="post-header-container d-flex">
           <div style="width: 100px;height: 100px; overflow: hidden;" class="rounded">
-            <img src="${profilePic ? profilePic : "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg"}" alt="" class="img-fluid">
+            <img src="${profilePic ? profilePic : "./wallpaper-for-facebook-profile-photo.jpg"}" alt="" class="img-fluid">
           </div>
           <div class="userName-id ms-2">
             <h5 style="width: 70%;" class="fw-bold postTitle">${title}</h5>
